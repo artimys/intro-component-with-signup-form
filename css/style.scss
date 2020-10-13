@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+// Primary colors
+$red: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+// Acccent colors
+$blue: hsl(248, 32%, 49%);
+// Neutral colors
+$dark-blue: hsl(0, 10%, 26%);
+$grayish-blue: hsl(246, 25%, 77%);
+
+
+
+/*==========
+DEFAULTS
+=========*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: url(../images/bg-intro-mobile.png) no-repeat;
+    background-size: cover;
+    background-color: $red;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    input {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        border: 1px solid $grayish-blue;
+        border-radius: 5px;
+        margin-bottom: 1.4em;
+        padding: 1.1em;
+        width: 100%;
+    }
+    input[type="submit"] {
+        box-shadow: 0px 4px 0px darken($green, 5%);
+        border: 0;
+        background-color: $green;
+        color: white;
+        cursor: pointer;
+        margin-bottom: 0.8em;
+        font-size: 1rem;
+        padding: 0.8em 1em;
+    }
+}
+
+a {
+    color: $red;
+    font-weight: 600;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+/*==========
+LAYOUT
+=========*/
+
+$border-radius-box: 10px;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3em;
+
+    padding: 2em;
+    min-width: 375px;
+
+    text-align: center;
+
+    header {
+        color: white;
+
+        h1 {
+            line-height: 1.2em;
+            margin-bottom: 0.9em;
+        }
+    }
+
+    main {
+        .try-free {
+            border-radius: $border-radius-box;
+            box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.2);
+            background-color: $blue;
+            color: white;
+            padding: 1.2em 5em;
+            margin-bottom: 1.8em;
+            font-size: 0.9rem;
+            line-height: 1.9em;
+            span {
+                font-weight: 700;
+            }
+        }
+
+        .signup-form {
+            border-radius: $border-radius-box;
+            box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.2);
+            background-color: white;
+            padding: 1.5em;
+
+            p {
+                color: $grayish-blue;
+                font-size: 0.7rem;
+                display: block;
+                margin: 0 auto;
+                width: 90%;
+            }
+        }
+    }
+
+}
+
+footer {
+    display: none;
+}
+
+
+
+
+/*==========
+DESKTOP
+=========*/
+
+@media only screen and (min-width: 750px) {
+
+    body {
+        background: url(../images/bg-intro-desktop.png);
+        background-color: $red;
+    }
+
+    form {
+        input {
+            padding: 1.1em 2.4em;
+        }
+    }
+
+    .container {
+        max-width: 1200px;
+        flex-direction: row;
+        column-gap: 3em;
+
+        header {
+            width: 50%;
+            text-align: left;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                font-size: 2.7rem;
+                margin-bottom: 0.5em;
+            }
+        }
+
+        main {
+            width: 50%;
+
+            .signup-form {
+                padding: 2em;
+            }
+        }
+
+    }
+
+}

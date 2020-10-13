@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+/*==========
+DEFAULTS
+=========*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(../images/bg-intro-mobile.png) no-repeat;
+  background-size: cover;
+  background-color: #ff7a7a;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form input {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  border: 1px solid #b9b6d3;
+  border-radius: 5px;
+  margin-bottom: 1.4em;
+  padding: 1.1em;
+  width: 100%;
+}
+
+form input[type="submit"] {
+  -webkit-box-shadow: 0px 4px 0px #30bb7f;
+          box-shadow: 0px 4px 0px #30bb7f;
+  border: 0;
+  background-color: #38cc8c;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 0.8em;
+  font-size: 1rem;
+  padding: 0.8em 1em;
+}
+
+a {
+  color: #ff7a7a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*==========
+LAYOUT
+=========*/
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 3em;
+  padding: 2em;
+  min-width: 375px;
+  text-align: center;
+}
+
+.container header {
+  color: white;
+}
+
+.container header h1 {
+  line-height: 1.2em;
+  margin-bottom: 0.9em;
+}
+
+.container main .try-free {
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.2);
+  background-color: #6055a5;
+  color: white;
+  padding: 1.2em 5em;
+  margin-bottom: 1.8em;
+  font-size: 0.9rem;
+  line-height: 1.9em;
+}
+
+.container main .try-free span {
+  font-weight: 700;
+}
+
+.container main .signup-form {
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  padding: 1.5em;
+}
+
+.container main .signup-form p {
+  color: #b9b6d3;
+  font-size: 0.7rem;
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+}
+
+footer {
+  display: none;
+}
+
+/*==========
+DESKTOP
+=========*/
+@media only screen and (min-width: 750px) {
+  body {
+    background: url(../images/bg-intro-desktop.png);
+    background-color: #ff7a7a;
+  }
+  form input {
+    padding: 1.1em 2.4em;
+  }
+  .container {
+    max-width: 1200px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-column-gap: 3em;
+            column-gap: 3em;
+  }
+  .container header {
+    width: 50%;
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container header h1 {
+    font-size: 2.7rem;
+    margin-bottom: 0.5em;
+  }
+  .container main {
+    width: 50%;
+  }
+  .container main .signup-form {
+    padding: 2em;
+  }
+}
+/*# sourceMappingURL=style.css.map */
