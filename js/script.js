@@ -1,45 +1,54 @@
+
+const signupForm = document.querySelector("form");
+const txtFirstName = document.querySelector("#firstName");
+const txtLastName = document.querySelector("#lastName");
+const txtEmail = document.querySelector("#email");
+const txtPassword= document.querySelector("#password");
+
+
+function validEmail(value) {
+    // Regex found at https://emailregex.com/
+    return /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/.test(value);
+}
+function displayError(inputElement) {
+    inputElement.parentElement.classList.add("error");
+    inputElement.placeholder = "";
+}
+function clearError(inputElement) {
+    inputElement.parentElement.classList.remove("error");
+}
+
+
+
 function validateSignupForm(event) {
-    event.preventDefault();
-
-    let txtFirstName = document.querySelector("#firstName");
-    let txtLastName = document.querySelector("#lastName");
-    let txtEmail = document.querySelector("#email");
-    let txtPassword= document.querySelector("#password");
-
     if (txtFirstName.value === "") {
-        txtFirstName.parentElement.classList.add("error");
-        txtFirstName.placeholder = "";
+        displayError(txtFirstName);
     } else {
-        txtFirstName.parentElement.classList.remove("error");
+        clearError(txtFirstName);
     }
 
     if (txtLastName.value === "") {
-        txtLastName.parentElement.classList.add("error");
-        txtLastName.placeholder = "";
+        displayError(txtLastName);
     } else {
-        txtLastName.parentElement.classList.remove("error");
+        clearError(txtLastName);
     }
 
     if ( (txtEmail.value === "") || (!validEmail(txtEmail.value)) ) {
-        txtEmail.parentElement.classList.add("error");
-        txtEmail.placeholder = "";
+        displayError(txtEmail);
     } else {
-        txtEmail.parentElement.classList.remove("error");
+        clearError(txtEmail);
     }
 
     if (txtPassword.value === "") {
-        txtPassword.parentElement.classList.add("error");
-        txtPassword.placeholder = "";
+        displayError(txtPassword);
     } else {
-        txtPassword.parentElement.classList.remove("error");
+        clearError(txtPassword);
     }
 
-    // return true;
+    // Call this when any inputs are invalid
+    // to prevent form submission
+    event.preventDefault();
 }
 
-function validEmail(value) {
-    return /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/.test(value);
-}
 
-const signupForm = document.querySelector("form");
 signupForm.addEventListener('submit', validateSignupForm);

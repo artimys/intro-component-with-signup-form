@@ -73,6 +73,7 @@ form {
     .input-group.error {
         input {
             border-color: $red;
+            color: $red;
             background: url(../images/icon-error.svg) no-repeat;
             padding-right: 5em;
             background-position: right 1.5em center;

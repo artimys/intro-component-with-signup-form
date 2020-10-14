@@ -66,6 +66,7 @@ form .input-group input[type="submit"]:active {
 
 form .input-group.error input {
   border-color: #ff7a7a;
+  color: #ff7a7a;
   background: url(../images/icon-error.svg) no-repeat;
   padding-right: 5em;
   background-position: right 1.5em center;
