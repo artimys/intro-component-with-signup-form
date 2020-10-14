@@ -25,6 +25,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 form .input-group {
@@ -145,7 +149,7 @@ LAYOUT
 }
 
 footer {
-  display: none;
+  padding: 1em;
 }
 
 /*==========
@@ -194,6 +198,11 @@ DESKTOP
   }
   .container main .signup-form {
     padding: 2em;
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
   }
 }
 /*# sourceMappingURL=style.css.map */
