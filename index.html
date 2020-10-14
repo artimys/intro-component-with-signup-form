@@ -33,12 +33,29 @@
 
       <div class="signup-form">
         <form>
-          <input type="text" id="firstName" name="firstName", placeholder="First Name">
-          <input type="text" id="lastName" name="lastName", placeholder="Last Name">
-          <input type="email" id="email" name="email", placeholder="Email Address">
-          <input type="password" id="password" name="password", placeholder="Password">
+          <div class="input-group">
+            <input type="text" id="firstName" name="firstName" placeholder="First Name">
+            <i>First Name cannot be empty</i>
+          </div>
 
-          <input type="submit" value="CLAIM YOUR FREE TRIAL">
+          <div class="input-group">
+            <input type="text" id="lastName" name="lastName" placeholder="Last Name">
+            <i>Last Name cannot be empty</i>
+          </div>
+
+          <div class="input-group">
+            <input type="email" id="email" name="email" placeholder="Email Address">
+            <i>Looks like this is not an email</i>
+          </div>
+
+          <div class="input-group">
+            <input type="password" id="password" name="password" placeholder="Password">
+            <i>Password cannot be empty</i>
+          </div>
+
+          <div class="input-group">
+            <input type="submit" value="CLAIM YOUR FREE TRIAL">
+          </div>
 
           <p>
             By clicking the button, you are agreeing to our
@@ -56,5 +73,7 @@
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

@@ -27,17 +27,28 @@ body {
           align-items: center;
 }
 
-form input {
+form .input-group {
+  margin-bottom: 1.4em;
+}
+
+form .input-group input {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   border: 1px solid #b9b6d3;
   border-radius: 5px;
-  margin-bottom: 1.4em;
-  padding: 1.1em;
   width: 100%;
+  padding: 1.1em;
 }
 
-form input[type="submit"] {
+form .input-group i {
+  display: none;
+  text-align: right;
+  color: #ff7a7a;
+  font-size: 0.8rem;
+  padding-top: 0.6em;
+}
+
+form .input-group input[type="submit"] {
   -webkit-box-shadow: 0px 4px 0px #30bb7f;
           box-shadow: 0px 4px 0px #30bb7f;
   border: 0;
@@ -47,6 +58,21 @@ form input[type="submit"] {
   margin-bottom: 0.8em;
   font-size: 1rem;
   padding: 0.8em 1em;
+}
+
+form .input-group input[type="submit"]:active {
+  background-color: #75dbaf;
+}
+
+form .input-group.error input {
+  border-color: #ff7a7a;
+  background: url(../images/icon-error.svg) no-repeat;
+  padding-right: 5em;
+  background-position: right 1.5em center;
+}
+
+form .input-group.error i {
+  display: block;
 }
 
 a {
@@ -129,7 +155,7 @@ DESKTOP
     background: url(../images/bg-intro-desktop.png);
     background-color: #ff7a7a;
   }
-  form input {
+  form .input-group input {
     padding: 1.1em 2.4em;
   }
   .container {

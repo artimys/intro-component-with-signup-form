@@ -34,24 +34,53 @@ body {
 }
 
 form {
-    input {
-        font-family: 'Poppins', sans-serif;
-        font-weight: 600;
-        border: 1px solid $grayish-blue;
-        border-radius: 5px;
+    .input-group {
         margin-bottom: 1.4em;
-        padding: 1.1em;
-        width: 100%;
+
+        input {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            border: 1px solid $grayish-blue;
+            border-radius: 5px;
+            width: 100%;
+            padding: 1.1em;
+        }
+
+        i {
+            display: none;
+            text-align: right;
+            color: $red;
+            font-size: 0.8rem;
+            padding-top: 0.6em;
+        }
+
+        input[type="submit"] {
+            box-shadow: 0px 4px 0px darken($green, 5%);
+            border: 0;
+            background-color: $green;
+            color: white;
+            cursor: pointer;
+            margin-bottom: 0.8em;
+            font-size: 1rem;
+            padding: 0.8em 1em;
+
+            &:active {
+                background-color: lighten($green, 15%);
+            }
+        }
     }
-    input[type="submit"] {
-        box-shadow: 0px 4px 0px darken($green, 5%);
-        border: 0;
-        background-color: $green;
-        color: white;
-        cursor: pointer;
-        margin-bottom: 0.8em;
-        font-size: 1rem;
-        padding: 0.8em 1em;
+
+    .input-group.error {
+        input {
+            border-color: $red;
+            background: url(../images/icon-error.svg) no-repeat;
+            padding-right: 5em;
+            background-position: right 1.5em center;
+        }
+
+        i {
+            display: block;
+        }
     }
 }
 
@@ -142,8 +171,10 @@ DESKTOP
     }
 
     form {
-        input {
-            padding: 1.1em 2.4em;
+        .input-group {
+            input {
+                padding: 1.1em 2.4em;
+            }
         }
     }
 
