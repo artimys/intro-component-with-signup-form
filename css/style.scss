@@ -62,7 +62,7 @@ form {
             color: white;
             cursor: pointer;
             margin-bottom: 0.8em;
-            font-size: 1rem;
+            font-size: 1.1rem;
             padding: 0.8em 1em;
 
             &:active {
@@ -129,7 +129,7 @@ $border-radius-box: 10px;
             color: white;
             padding: 1.2em 5em;
             margin-bottom: 1.8em;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             line-height: 1.9em;
             span {
                 font-weight: 700;
@@ -175,7 +175,7 @@ DESKTOP
     form {
         .input-group {
             input {
-                padding: 1.1em 2.4em;
+                padding: 1.2em 2.4em;
             }
         }
     }
@@ -195,7 +195,7 @@ DESKTOP
             align-items: center;
 
             h1 {
-                font-size: 2.7rem;
+                font-size: 3rem;
                 margin-bottom: 0.5em;
             }
         }
